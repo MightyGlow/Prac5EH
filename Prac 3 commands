@@ -1,0 +1,4 @@
+tracert www.amazon.com
+ifconfig
+ping 
+netstat
